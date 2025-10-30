@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Livres</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=VOTRE_CLIENT_ID&currency=EUR"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon site d'auteur</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Découvrez mes livres</h2>
+        <p>Plongez dans mes univers littéraires et trouvez votre prochaine lecture.</p>
+    </section>
+
+    <section id="catalogue">
+        <h2>Catalogue</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Livre 1">
+                <h3>Livre 1</h3>
+                <p>Un roman captivant.</p>
+                <button onclick="addToCart('Livre 1', 15.00)">Ajouter au panier</button>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Livre 2">
+                <h3>Livre 2</h3>
+                <p>Une histoire émouvante.</p>
+                <button onclick="addToCart('Livre 2', 20.00)">Ajouter au panier</button>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Livre 3">
+                <h3>Livre 3</h3>
+                <p>Un voyage extraordinaire.</p>
+                <button onclick="addToCart('Livre 3', 18.00)">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Votre panier</h2>
+        <ul id="cart-items"></ul>
+        <div id="paypal-button-container"></div>
+    </section>
+
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Je suis un auteur passionné par l'écriture et la création d'histoires uniques. Ce site est dédié à mes œuvres et à mes lecteurs.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mon Site d'Auteur. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
